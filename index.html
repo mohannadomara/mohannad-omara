@@ -1,13 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohannad Omara - Biomedical Engineer</title>
+    <title>Mohannad Omara - بطاقة زجاجية</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --primary: rgba(59, 73, 119, 0.8);
+            --secondary: rgba(75, 108, 183, 0.8);
+            --text: #fff;
+        }
+        
         body {
-            font-family: 'Arial', sans-serif;
-            background: #f0f2f5;
+            font-family: 'Tajawal', sans-serif;
+            background: url('https://images.unsplash.com/photo-1518655048521-f130df041f66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,67 +23,105 @@
             margin: 0;
             padding: 20px;
         }
-        .card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            width: 100%;
-            max-width: 400px;
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(15px);
+            border-radius: 20px;
             padding: 30px;
+            width: 90%;
+            max-width: 400px;
             text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--text);
         }
+        
         .profile-img {
             width: 120px;
             height: 120px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #4b6cb7;
             margin: 0 auto 20px;
+            border: 3px solid rgba(255, 255, 255, 0.4);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
         }
+        
         h1 {
-            color: #333;
-            margin: 10px 0;
+            margin: 0 0 10px;
+            font-size: 28px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
+        
         .title {
-            color: #666;
-            margin-bottom: 20px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
-        .contact-btn {
-            display: block;
-            background: #4b6cb7;
-            color: white;
-            padding: 12px;
-            border-radius: 8px;
-            margin: 15px 0;
-            text-decoration: none;
-            font-weight: bold;
+        
+        .glass-btn {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: 12px 25px;
+            margin: 10px 0;
+            width: 100%;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 16px;
+            color: var(--text);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
-        .add-contact {
-            background: #2ecc71;
-            margin-top: 25px;
+        
+        .glass-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+        
+        .glass-btn i {
+            margin-left: 10px;
+            font-size: 20px;
+        }
+        
+        .whatsapp-btn {
+            background: rgba(37, 211, 102, 0.7);
+        }
+        
+        .save-btn {
+            margin-top: 20px;
+            background: var(--secondary);
         }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div class="card">
-        <img src="profile.jpg" alt="Mohannad" class="profile-img">
-        <h1>Mohannad Omara</h1>
-        <p class="title">Biomedical Engineer</p>
+    <div class="glass-card">
+        <img src="profile.jpg" alt="Mohannad Omara" class="profile-img">
+        <h1>مهند عمرة</h1>
+        <p class="title">مهندس طبي</p>
         
-        <a href="tel:+966566061030" class="contact-btn">
-            📞 +966 56 606 1030
-        </a>
+        <button class="glass-btn" onclick="window.location.href='tel:+966566061030'">
+            <i class="fas fa-phone-alt"></i> +966 56 606 1030
+        </button>
         
-        <a href="mailto:mohannad.omaraa@gmail.com" class="contact-btn">
-            ✉️ mohannad.omaraa@gmail.com
-        </a>
+        <button class="glass-btn" onclick="window.location.href='mailto:mohannad.omaraa@gmail.com'">
+            <i class="fas fa-envelope"></i> mohannad.omaraa@gmail.com
+        </button>
         
-        <!-- زر الإضافة إلى جهات الاتصال -->
-        <a href="data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Mohannad%20Omara%0ATEL;TYPE=CELL:+966566061030%0AEMAIL:mohannad.omaraa@gmail.com%0ATITLE:Biomedical%20Engineer%0AEND:VCARD" 
-           class="contact-btn add-contact"
-           download="Mohannad_Omara.vcf">
-           📥 Save to Contacts
-        </a>
+        <button class="glass-btn whatsapp-btn" onclick="window.location.href='https://wa.me/966566061030'">
+            <i class="fab fa-whatsapp"></i> واتساب
+        </button>
+        
+        <button class="glass-btn save-btn" 
+                onclick="window.location.href='data:text/vcard;charset=utf-8,BEGIN:VCARD%0AVERSION:3.0%0AFN:Mohannad%20Omara%0ATEL;TYPE=CELL:+966566061030%0AEMAIL:mohannad.omaraa@gmail.com%0ATITLE:Biomedical%20Engineer%0AEND:VCARD'"
+                download="Mohannad_Omara.vcf">
+            <i class="fas fa-user-plus"></i> حفظ الجهة
+        </button>
     </div>
 </body>
 </html>
